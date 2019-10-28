@@ -2,18 +2,11 @@
 
 // returns first forwarded IP match it finds
 function forwarded_ip() {
-<<<<<<< HEAD
-=======
-
->>>>>>> 0ae5dc33ce70359fc85ad2b33eff8c4c1291288c
 
   $server=array(
     'HTTP_X_FORWARDED_FOR'=>'123.123.123.123',
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 0ae5dc33ce70359fc85ad2b33eff8c4c1291288c
   $keys = array(
     'HTTP_X_FORWARDED_FOR',
     'HTTP_X_FORWARDED',
