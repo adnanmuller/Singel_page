@@ -18,17 +18,11 @@
 
 <?php
 
-require_once('browser_dectective.php');
-$bd=new BrowserDetective();
-$bd->detect();
-
 $timestamp=$_SERVER['REQUEST_TIME'];
 date_default_timezone_set("America/New_York"); ?>
 
   <div id="main-content">
     <h2>Browser Mirror</h2>
-          <p>Platform:<?php echo $bd->platform; ?> </p>
-          <p>Browser:<?php echo $bd->browser_name; ?></p>
           <p>Remote IP: <?php echo $_SERVER['REMOTE_ADDR']; ?></p>
           <p>User Agent: <?php echo $_SERVER['HTTP_USER_AGENT']; ?></p>
           <p>Referer: <?php echo $_SERVER['HTTP_REFERER']; ?></p>

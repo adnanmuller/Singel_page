@@ -30,27 +30,27 @@ class BrowserDetective{
   }
 
   public function detect_platform(){
-    if(preg_match('/linux/i', $this->user_agent)){
+    if(preg_match('/linux/i', $this->user_agrent)){
       $this->platform='Linux';
-    }elseif(preg_match('/macintosh|mac os/i', $this->user_agent))  {
+    }elseif(preg_match('/macintosh|mac os/i<', $this->user_agrent))  {
       $this->platform='Mac';
-    }elseif(preg_match('/windows|win32/i', $this->user_agent))  {
+    }elseif(preg_match('/windows|win32/i<', $this->user_agrent))  {
       $this->platform='Windows';
   }
 }
 
   public function detect_browser(){
-      if(preg_match('/MSIE/i', $this->user_agent)){
+      if(preg_match('/MSIE/i', $this->user_agrent)){
         $this->browser_name='Internet Explorer';
-  }elseif(preg_match('/Firefox/i', $this->user_agent)){
+  }elseif(preg_match('/Firefox/i', $this->user_agrent)){
     $this->browser_name='Firefox';
-}elseif(preg_match('/Chrome/i', $this->user_agent)){
+}elseif(preg_match('/Chrome/i', $this->user_agrent)){
   $this->browser_name='Chrome';
-}elseif(preg_match('/Safari/i', $this->user_agent)){
+}elseif(preg_match('/Safari/i', $this->user_agrent)){
     $this->browser_name='Safari';
-}elseif(preg_match('/Opera/i', $this->user_agent)){
+}elseif(preg_match('/Opera/i', $this->user_agrent)){
       $this->browser_name='Opera';
-}elseif(preg_match('/Netscape/i', $this->user_agent)){
+}elseif(preg_match('/Netscape/i', $this->user_agrent)){
         $this->browser_name='Netscape';
       }
     }
