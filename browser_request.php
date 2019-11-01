@@ -10,6 +10,7 @@
 
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="/main.js"></script>
 </head>
 
 <body>
@@ -51,15 +52,6 @@ date_default_timezone_set("America/New_York"); ?>
 
   </div>
   <script type="text/javascript">
-
-  var width=window.innerWidth;
-  var height=window.innerHeight;
-  console.log(width,height);
-var first= document.getElementById('width');
-var second=document.getElementById('height');
-first.innerHTML=' '+ width +' px';
-second.innerHTML=' '+ height + ' px';
-
   </script>
 
 </body>
