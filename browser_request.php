@@ -29,6 +29,10 @@ date_default_timezone_set("America/New_York"); ?>
     <h2>Browser Mirror</h2>
           <p>Platform:<?php echo $bd->platform; ?> </p>
           <p>Browser:<?php echo $bd->browser_name; ?></p>
+
+          <p>Browser Windows width:<span id="width"></span> </p>
+          <p>Browser Windows height:<span id="height"></span> </p>
+
           <p>Remote IP: <?php echo $_SERVER['REMOTE_ADDR']; ?></p>
           <p>User Agent: <?php echo $_SERVER['HTTP_USER_AGENT']; ?></p>
           <p>Referer: <?php echo $_SERVER['HTTP_REFERER']; ?></p>
@@ -46,6 +50,17 @@ date_default_timezone_set("America/New_York"); ?>
 
 
   </div>
+  <script type="text/javascript">
+
+  var width=window.innerWidth;
+  var height=window.innerHeight;
+  console.log(width,height);
+var first= document.getElementById('width');
+var second=document.getElementById('height');
+first.innerHTML=' '+ width +' px';
+second.innerHTML=' '+ height + ' px';
+
+  </script>
 
 </body>
 
