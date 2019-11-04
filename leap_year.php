@@ -61,6 +61,7 @@ if(isset($_GET['year'])){
        <form class="" action="" method="get">
         <p> Enter a year to find out if it is a leap year!</p>
         <input type="text" name="year" value="<?php echo $year; ?>"><br/>
+        <input type="submit" name="" value="submit">
        </form>
 
 
