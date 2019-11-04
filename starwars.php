@@ -44,20 +44,41 @@ date_default_timezone_set("America/New_York");
         8 => '2017-05-26',
         9 =>NULL
        );
+if(isset($_GET['episode'])){
+  $episode=intval($_GET['episode']);
+}else{
+  $episode=8;
+}
 
-       $episode=8;
        $relase_date_s=$star_wars_date[$episode];
        $relase_date_t=strtotime($relase_date_s);  //$timestamp
        $relase_date_p=strftime("%B %d, %Y",$relase_date_t);   // pretty string
-
-if(time()>=$relase_date_t){
+if(is_null($relase_date_s)){
+  echo "No Episod #{$episode} does not yet have a release date! ";
+}
+elseif(time()>=$relase_date_t){
   echo "Yes Episod #{$episode} was released on {$relase_date_p}";
 }else{
     echo "No Episod #{$episode} will be released on {$relase_date_p}";
 }
        ?>
+<form class="" action="" method="get">
+  <p>Wich starwars Episod:<p/><br/>
+  <select class="" name="episode">
+    <?php
+    for ($i = 1; $i <= 9; $i++){
+      echo "<option value=\"{$i}\" >#{$i}<option\/>";
+    }
 
 
+?>
+  </select>
+  <input type="submit" value="submit" />
+
+</form>
+<?php
+
+?>
 
   </div>
   <script type="text/javascript">
