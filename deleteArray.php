@@ -3,7 +3,7 @@
 function arrayDelete($value, $array){
 $key=array_search($value,$array);
   if($key!==false){
-    unset($array[key]);
+    unset($array[$key]);
   }
 //unset leaves the index in place
 //array_value is like reindexing
@@ -26,7 +26,7 @@ echo "<pre>";
  echo "Background color: {$bg_color}<br/>";
 
  //need to ensure that text color is not the same as background colors
- $text_color=$colors;
+ $text_color=arrayDelete($bg_color, $colors);
 
  echo "-----------------<br />";
  echo "Text colors:<br/>";
