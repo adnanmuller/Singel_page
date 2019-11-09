@@ -1,10 +1,24 @@
 <?php
+function arrayDelete($value, $array){
+$key=array_search($value,$array);
+  if($key!==false){
+    unset($array[$key]);
+  }
+//unset leaves the index in place
+//array_value is like reindexing
+  return array_values($array);
+
+
+}
+
 $style=$arrayName = array('bold','italic','underline','uppercase' );
 $styles=$arrayName[rand(0,3)];
 $color=array("red","green","blue","violet","grey","black");
 $color_count=count($color);
 $bg_color=$color[rand(0,$color_count-1)];
-$text_color=$color[rand(0,$color_count-1)];
+$text_colors=arrayDelete($bg_color, $color);
+$text_color_count=count($text_colors);
+$text_color=$text_colors[rand(0,$text_color_count-1)];
 $font_size=(100+rand(1,20)*5);
 $aligns=['left','center','right','justify'];
 $text_align=$aligns[rand(0,3)];
