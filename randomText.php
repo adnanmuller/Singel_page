@@ -27,7 +27,7 @@ $objects=array(
   'a new bicycle'
 );
 
-//$i=array_rand($fragments);
+
 
 $sentence=pick_random($subjects)." ".pick_random($verbs).' '.pick_random($objects);
  ?>
