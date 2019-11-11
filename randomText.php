@@ -1,14 +1,35 @@
 <?php
-$fragments=array(
-  'ate yor sandwich',
-  'wrote you a song',
-  'called your cellphone',
-  'borrowed your comb'
+//returns random element from the array
+
+function pick_random($array){
+  return $array[array_rand($array)];
+}
+
+
+$subjects=array(
+  'Elvis',
+  'Your mamam',
+  'Your neigbour\'s dog',
+  'A dummy programmer'
 );
 
-$i=array_rand($fragments);
+$verbs=array(
+  'needs',
+  'wants',
+  'ate',
+  'build'
+);
 
-$sentence='Elvis '.$fragments[$i].'.';
+$objects=array(
+  'a website',
+  'a bath',
+  'a large pizza',
+  'a new bicycle'
+);
+
+//$i=array_rand($fragments);
+
+$sentence=pick_random($subjects)." ".pick_random($verbs).' '.pick_random($objects);
  ?>
 <!DOCTYPE html>
 <html>
