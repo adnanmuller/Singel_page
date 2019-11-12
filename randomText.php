@@ -49,7 +49,12 @@ $quantity=pick_random($quantities);
 $adjective=pick_random($adjectives);
 $object=pick_random($objects);
 
-$sentence=$subject." ".$verb.' '.$object;
+//pluralization
+if($quantity!= 'a'){
+  $object=$object."s";
+}
+
+$sentence=$subject." ".$verb.' '.$quantity." ".$adjective." ".$object;
  ?>
 <!DOCTYPE html>
 <html>
