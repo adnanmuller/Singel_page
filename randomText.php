@@ -45,6 +45,8 @@ $objects=array(
 
 $subject=pick_random($subjects);
 $verb=pick_random($verbs);
+$quantity=pick_random($quantities);
+$adjective=pick_random($adjectives);
 $object=pick_random($objects);
 
 $sentence=$subject." ".$verb.' '.$object;
