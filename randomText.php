@@ -8,9 +8,9 @@ function pick_random($array){
 
 $subjects=array(
   'Elvis',
-  'Your mamam',
-  'Your neigbour\'s dog',
-  'A dummy programmer'
+  ' mama',
+  'neigbour\'s dog',
+  'dummy programmer'
 );
 
 $verbs=array(
@@ -44,6 +44,12 @@ $objects=array(
 );
 
 $subject=pick_random($subjects);
+if($subject !="Elvis" && $subject != "Your mama"){
+  $subject_quantity=pick_random($quantities);
+  $subject_adjective=pick_random($adjectives);
+  $subject=$subject_quantity." ".$subject_adjective." ".$subject;
+}
+
 $verb=pick_random($verbs);
 $quantity=pick_random($quantities);
 $adjective=pick_random($adjectives);
@@ -66,12 +72,12 @@ body{
   margin:5px;
   padding:0;
   text-align: left;
-  text-transform: uppercase;
+
 }
   </style>
 </head>
 <body>
-<p><?php echo $sentence   ?></p>
+<p><?php echo ucfirst($sentence);   ?></p>
 
 </body>
 </html>
