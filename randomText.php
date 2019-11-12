@@ -27,9 +27,11 @@ $objects=array(
   'a new bicycle'
 );
 
+$subject=pick_random($subjects);
+$verb=pick_random($verbs);
+$object=pick_random($objects);
 
-
-$sentence=pick_random($subjects)." ".pick_random($verbs).' '.pick_random($objects);
+$sentence=$subject." ".$verb.' '.$object;
  ?>
 <!DOCTYPE html>
 <html>
