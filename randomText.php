@@ -8,9 +8,9 @@ function pick_random($array){
 
 $subjects=array(
   'Elvis',
-  'Your mamam',
-  'Your neigbour\'s dog',
-  'A dummy programmer'
+  ' mama',
+  'neigbour\'s dog',
+  'dummy programmer'
 );
 
 $verbs=array(
@@ -20,16 +20,47 @@ $verbs=array(
   'build'
 );
 
-$objects=array(
-  'a website',
-  'a bath',
-  'a large pizza',
-  'a new bicycle'
+$quantities=array(
+  'a',
+  'two',
+  'three',
+  'two dozen',
+  'fifty'
 );
 
+$adjectives=array(
+  "new",
+  "large",
+  "cute",
+  "hot",
+  "wicker cool"
+);
 
+$objects=array(
+  'website',
+  'bath',
+  'large pizza',
+  'new bicycle'
+);
 
-$sentence=pick_random($subjects)." ".pick_random($verbs).' '.pick_random($objects);
+$subject=pick_random($subjects);
+if($subject !="Elvis" && $subject != "Your mama"){
+  $subject_quantity=pick_random($quantities);
+  $subject_adjective=pick_random($adjectives);
+  $subject=$subject_quantity." ".$subject_adjective." ".$subject;
+}
+
+$verb=pick_random($verbs);
+$quantity=pick_random($quantities);
+$adjective=pick_random($adjectives);
+$object=pick_random($objects);
+
+//pluralization
+if($quantity!= 'a'){
+  $object=$object."s";
+}
+
+$sentence=$subject." ".$verb.' '.$quantity." ".$adjective." ".$object;
  ?>
 <!DOCTYPE html>
 <html>
@@ -41,12 +72,12 @@ body{
   margin:5px;
   padding:0;
   text-align: left;
-  text-transform: uppercase;
+
 }
   </style>
 </head>
 <body>
-<p><?php echo $sentence   ?></p>
+<p><?php echo ucfirst($sentence);   ?></p>
 
 </body>
 </html>
