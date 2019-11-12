@@ -28,11 +28,19 @@ $quantities=array(
   'fifty'
 );
 
+$adjectives=array(
+  "new",
+  "large",
+  "cute",
+  "hot",
+  "wicker cool"
+);
+
 $objects=array(
-  'a website',
-  'a bath',
-  'a large pizza',
-  'a new bicycle'
+  'website',
+  'bath',
+  'large pizza',
+  'new bicycle'
 );
 
 $subject=pick_random($subjects);
