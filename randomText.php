@@ -20,6 +20,14 @@ $verbs=array(
   'build'
 );
 
+$quantities=array(
+  'a',
+  'two',
+  'three',
+  'two dozen',
+  'fifty'
+);
+
 $objects=array(
   'a website',
   'a bath',
